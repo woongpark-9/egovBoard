@@ -6,9 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Board List</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <style type="text/css">
 a{
  text-decoration: auto;
@@ -41,7 +41,7 @@ a{
             <c:forEach items="${list }" var="result">
                 <tr>
                     <td>${result.testId}</td>
-                    <td>${result.testTitle}</td>
+                    <td><a href="testDetail.do?testId=${result.testId}">${result.testTitle}</a></td>
                     <td>${result.testName}</td>
                     <td>${result.testDate}</td>
                 </tr>
@@ -60,7 +60,7 @@ a{
                 <li><a href="#" style="margin-right:5px;" class="text-secondary">▶</a></li>
             </ul>
         </div>
-        <a class="btn btn-outline-info" style="float:right">글쓰기</a>
+        <a class="btn btn-outline-info" style="float:right" href="testRegister.do">글쓰기</a>
     </div>
     <br>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

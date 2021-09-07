@@ -19,5 +19,28 @@ public class TestServiceImpl implements TestService{
     public List<TestVo> selectTest(TestVo testVo) throws Exception {
         return testDao.selectTest(testVo);
     }
+    
+    @Override
+    public TestVo selectDetail(int testId) throws Exception {
+    	return testDao.selectDetail(testId);
+    }
+    
+    @Override
+    public void insertTest(TestVo vo) throws Exception {
+    	// TODO Auto-generated method stub
+    	testDao.insertTest(vo);
+    }
+    
+    @Override
+    public void updateTest(TestVo vo) throws Exception {
+    	// TODO Auto-generated method stub
+    	testDao.updateTest(vo);
+    }
+    
+    @Override
+    public void deleteTest(int testId) throws Exception {
+    	// TODO Auto-generated method stub
+    	testDao.deleteTest(testId);
+    }
  
 }
